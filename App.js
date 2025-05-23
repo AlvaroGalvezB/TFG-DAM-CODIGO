@@ -2,6 +2,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { View, Image, TouchableOpacity } from 'react-native';
+import { Analytics } from '@vercel/analytics/react';
 import Login from './src/General/login';
 import Register from './src/General/register';
 import CreateEvent from './src/ONG/createEvent';
@@ -17,6 +18,7 @@ const Stack = createNativeStackNavigator();
 const App = () => (
   <Provider>
     <NavigationContainer>
+      <Analytics />
       <Stack.Navigator initialRouteName="Iniciar Sesión">
         <Stack.Screen 
           name="Iniciar Sesión" 
